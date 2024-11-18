@@ -7,9 +7,9 @@ import { SidebarContext } from '../contexts/SidebarContext'
 import { CartContext } from '../contexts/CartContext'
 
 const Sidebar = () => {
-  const { isOpen, handleClose } = useContext(SidebarContext)
-
-  const { cart, clearCart, total, itemAmount } = useContext(CartContext)
+  const { isOpen, handleClose } = useContext(SidebarContext); // ดึงข้อมูลเกี่ยวกับสถานะการเปิด/ปิด Sidebar จาก SidebarContext
+  const { cart, clearCart, total, itemAmount } = useContext(CartContext); // ดึงข้อมูลตะกร้าสินค้า เช่น รายการสินค้า, ฟังก์ชันลบสินค้า, ราคารวม และจำนวนสินค้าทั้งหมดจาก CartContext
+  
 
 
   

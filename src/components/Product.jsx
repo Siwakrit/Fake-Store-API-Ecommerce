@@ -1,14 +1,12 @@
-import React, { useContext } from 'react'
-
-import { Link } from 'react-router-dom'
-
-import { BsPlus, BsEyeFill } from 'react-icons/bs'
-import { CartContext } from '../contexts/CartContext'
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { BsPlus, BsEyeFill } from 'react-icons/bs';
+import { CartContext } from '../contexts/CartContext';
 
 const Product = ({ product }) => {
-  const { addToCart } = useContext(CartContext);
-  
-  const { id, image, category, title, price } = product;
+  const { addToCart } = useContext(CartContext); // ดึงฟังก์ชัน addToCart จาก CartContext เพื่อใช้ในการเพิ่มสินค้าในตะกร้า
+
+  const { id, image, category, title, price } = product; 
   return (
     <div>
       <div className='border border-[#e4e4e4] h-[300px] mb-4 relative overflow-hidden group transition'>
